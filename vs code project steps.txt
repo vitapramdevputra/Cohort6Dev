@@ -1,0 +1,13 @@
+How to create class in VS Code project?
+- Command pallete : cmd+shift+p -> sfdx create apex class
+
+How to push or deploy the class to the ORG?
+- update class. Save. This class is saved in our local machine. 
+- right click in class > SFDX Deploy the source to org
+
+How to execute anonymous apex code?
+- Scripts > apex > create a new file (firstAnon.apex)
+
+- SELECT THE TEXT you want to execute
+    - if you have execute button click on it.
+    - else open anonymous apex > sfdx execute anonymous window with currently selected text
