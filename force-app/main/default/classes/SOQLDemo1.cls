@@ -62,4 +62,25 @@ public class SOQLDemo1 {
         }
       }
 
+      public static void soql6(string stage){
+        list<opportunity> opps = [select id, name, account.name, amount, stagename from opportunity where stagename = :stage];
+        for (Opportunity eachOpp : opps) {
+            system.debug('opp name: ' + eachOpp.Name + ' ' + eachOpp.Account.Name);
+            system.debug('opp stagename: ' + eachOpp.StageName);
+            system.debug('opp amount: ' + eachOpp.amount);
+            system.debug('-------');
+        }
+      }
+
+      public static void soql7(){
+        //what do we mean by limit 10? 
+        list<account> listAcc = [select name, website, Active__c from account limit 10];
+        for (Account eachAcc : listAcc) {
+          system.debug('eachAcc name: ' + eachAcc.Name);
+            system.debug('eachAcc website: ' + eachAcc.Website);
+            system.debug('eachAcc active: ' + eachAcc.Active__c); //if we are using the field, then we MUST query it.
+
+        }
+      }
+
 }

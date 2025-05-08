@@ -1,1 +1,4 @@
-SOQLDemo1.soql5();
+SOQLDemo1.dml7Right();
+//SOQLDemo1.soql6('Needs Analysis');
+
+
